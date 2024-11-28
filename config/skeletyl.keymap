@@ -94,8 +94,8 @@
         FUNC-ACTION {
             bindings = <
 &kp F1  &kp F2   &kp F3   &kp F4   &kp K_CUT      &kp C_PLAY_PAUSE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE           &kp PRINTSCREEN
-&kp F5  &kp F6   &kp F7   &kp F8   &kp K_COPY     &kp PAGE_UP       &hm INSERT HOME    &kp UP_ARROW     &hm PRINTSCREEN END  &hm LG(LC(RIGHT)) LC(PAGE_UP)
-&kp F9  &kp F10  &kp F11  &kp F12  &kp K_PASTE    &kp PAGE_DOWN     &kp LEFT_ARROW     &kp DOWN_ARROW   &kp RIGHT_ARROW      &hm LG(LC(LEFT_ARROW)) LC(PAGE_DOWN)
+&kp F5  &kp F6   &kp F7   &kp F8   &kp K_COPY     &kp PAGE_UP       &hm INSERT HOME    &kp UP_ARROW     &hm PRINTSCREEN END  &hm LG(LC(LEFT)) LC(PAGE_UP)
+&kp F9  &kp F10  &kp F11  &kp F12  &kp K_PASTE    &kp PAGE_DOWN     &kp LEFT_ARROW     &kp DOWN_ARROW   &kp RIGHT_ARROW      &hm LG(LC(RIGHT)) LC(PAGE_DOWN)
                  &trans   &trans   &trans         &trans            &trans             &trans
             >;
 
