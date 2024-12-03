@@ -16,14 +16,7 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        tri_layer {
-            if-layers = <0 1 2 3>;
-            then-layer = <4>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 
     combos {
         compatible = "zmk,combos";
@@ -35,7 +28,7 @@
 
         caps {
             bindings = <&kp CAPS>;
-            key-positions = <0 10 20>;
+            key-positions = <0 10>;
         };
 
         back {
@@ -51,13 +44,11 @@
         gamemode {
             bindings = <&to 4>;
             key-positions = <13 14 15 16>;
-            layers = <0 1 2 4>;
         };
 
         qwerty {
             bindings = <&to 0>;
             key-positions = <3 4 5 6>;
-            layers = <0 2 1 4>;
         };
 
         bluetooth {
@@ -82,10 +73,10 @@
 
         NUMB-SYMB {
             bindings = <
-&kp SINGLE_QUOTE  &kp COMMA    &kp PERIOD  &kp GRAVE       &kp LEFT_BRACKET     &kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK
-&hm GRAVE EXCL    &kp AT_SIGN  &kp HASH    &kp TILDE       &kp RIGHT_BRACKET    &kp CARET     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
-&kp EQUAL         &kp MINUS    &kp PLUS    &kp LEFT_BRACE  &kp SLASH            &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS
-                               &trans      &trans          &trans               &trans        &trans        &trans
+&kp SINGLE_QUOTE  &kp TILDE      &kp CARET    &kp GRAVE             &kp QUESTION             &kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK
+&kp EXCL          &kp AT_SIGN    &kp HASH     &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp EQUAL     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
+&kp BSLH          &kp AMPERSAND  &kp PERCENT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS
+                                 &trans       &trans                &trans                   &trans        &trans        &trans
             >;
 
             label = "numbers and symbols";
@@ -93,10 +84,10 @@
 
         FUNC-ACTION {
             bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4   &kp K_CUT      &kp C_PLAY_PAUSE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE           &kp PRINTSCREEN
-&kp F5  &kp F6   &kp F7   &kp F8   &kp K_COPY     &kp PAGE_UP       &hm INSERT HOME    &kp UP_ARROW     &hm PRINTSCREEN END  &hm LG(LC(LEFT)) LC(PAGE_UP)
-&kp F9  &kp F10  &kp F11  &kp F12  &kp K_PASTE    &kp PAGE_DOWN     &kp LEFT_ARROW     &kp DOWN_ARROW   &kp RIGHT_ARROW      &hm LG(LC(RIGHT)) LC(PAGE_DOWN)
-                 &trans   &trans   &trans         &trans            &trans             &trans
+&kp F1  &kp F2   &kp F3   &kp F4   &kp C_NEXT    &kp LEFT_ALT   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE           &kp PRINTSCREEN
+&kp F5  &kp F6   &kp F7   &kp F8   &kp C_PP      &kp PAGE_UP    &hm INSERT HOME    &kp UP_ARROW     &hm PRINTSCREEN END  &hm LG(LC(LEFT)) LC(PAGE_UP)
+&kp F9  &kp F10  &kp F11  &kp F12  &kp C_PREV    &kp PAGE_DOWN  &kp LEFT_ARROW     &kp DOWN_ARROW   &kp RIGHT_ARROW      &hm LG(LC(RIGHT)) LC(PAGE_DOWN)
+                 &trans   &trans   &trans        &trans         &trans             &trans
             >;
 
             label = "FN, actions and cursor";
