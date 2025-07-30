@@ -95,10 +95,10 @@
 
         CONECTION {
             bindings = <
-&bt BT_CLR_ALL  &none         &none         &none   &none    &none   &none   &none   &out OUT_BLE  &out OUT_USB
-&none           &none         &none         &none   &none    &none   &none   &none   &none         &none
-&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &none   &none    &none   &none   &none   &none         &none
-                              &trans        &trans  &none    &trans  &trans  &trans
+&bt BT_CLR_ALL  &none         &none         &none   &soft_off    &none   &none   &none   &out OUT_BLE  &out OUT_USB
+&none           &none         &none         &none   &none        &none   &none   &none   &none         &none
+&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &none   &none        &none   &none   &none   &none         &none
+                              &trans        &trans  &none        &trans  &trans  &trans
             >;
         };
 
