@@ -87,7 +87,7 @@
 &kp F1  &kp F2   &kp F3   &kp F4   &kp C_NEXT    &kp LEFT_ALT   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE           &kp PRINTSCREEN
 &kp F5  &kp F6   &kp F7   &kp F8   &kp C_PP      &kp PAGE_UP    &hm INSERT HOME    &kp UP_ARROW     &hm PRINTSCREEN END  &hm LG(LC(LEFT)) LC(PAGE_UP)
 &kp F9  &kp F10  &kp F11  &kp F12  &kp C_PREV    &kp PAGE_DOWN  &kp LEFT_ARROW     &kp DOWN_ARROW   &kp RIGHT_ARROW      &hm LG(LC(RIGHT)) LC(PAGE_DOWN)
-                 &trans   &trans   &mo 4         &trans         &trans             &trans
+                 &trans   &trans   &trans        &trans         &trans             &trans
             >;
 
             label = "FN, actions and cursor";
@@ -107,7 +107,7 @@
 &trans  &trans  &trans  &trans  &trans    &trans  &msc SCRL_DOWN  &mkp MCLK       &msc SCRL_UP     &trans
 &trans  &trans  &trans  &trans  &trans    &trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans
 &trans  &trans  &trans  &trans  &trans    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
-                &trans  &trans  &trans    &trans  &trans          &trans
+                &trans  &trans  &none     &trans  &trans          &trans
             >;
         };
     };
