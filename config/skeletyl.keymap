@@ -1,9 +1,6 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/rgb.h>
 
 / {
     behaviors {
@@ -53,7 +50,7 @@
             key-positions = <3 4 5 6>;
         };
 
-        connection+led {
+        connection {
             bindings = <&to 3>;
             key-positions = <32 0 9 33>;
         };
@@ -61,6 +58,12 @@
         moba {
             bindings = <&to 5>;
             key-positions = <23 24 25 26>;
+        };
+
+        tabgamer {
+            bindings = <&kp TAB>;
+            key-positions = <10 20>;
+            layers = <5 4 6>;
         };
     };
 
@@ -102,10 +105,10 @@
 
         CONECTION {
             bindings = <
-&bt BT_CLR_ALL  &none         &studio_unlock  &none   &rgb_ug RGB_TOG    &rgb_ug RGB_COLOR_HSB(180,100,77)  &none   &none   &out OUT_BLE  &out OUT_USB
-&none           &none         &none           &none   &bl BL_TOG         &bl BL_SET 100                     &none   &none   &none         &none
-&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2    &none   &none              &none                              &none   &none   &none         &none
-                              &trans          &trans  &none              &trans                             &trans  &trans
+&none         &none         &none         &none         &none           &none           &none  &none  &none  &none
+&none         &none         &none         &none         &none           &none           &none  &none  &none  &none
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_CLR_ALL  &none  &none  &none  &bt BT_CLR
+                            &none         &none         &none           &none           &none  &none
             >;
         };
 
