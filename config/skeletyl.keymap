@@ -55,6 +55,11 @@
             bindings = <&kp RA(COMMA)>;
             key-positions = <29 19>;
         };
+
+        cursor {
+            bindings = <&to 4>;
+            key-positions = <13 14 15 16>;
+        };
     };
 
     keymap {
@@ -107,7 +112,7 @@
 &trans  &trans  &trans  &trans  &trans    &trans  &msc SCRL_DOWN  &mkp MCLK       &msc SCRL_UP     &trans
 &trans  &trans  &trans  &trans  &trans    &trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans
 &trans  &trans  &trans  &trans  &trans    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
-                &trans  &trans  &none     &trans  &trans          &trans
+                &trans  &trans  &trans    &trans  &trans          &trans
             >;
         };
     };
