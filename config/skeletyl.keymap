@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     behaviors {
@@ -40,11 +41,6 @@
             key-positions = <9 19>;
         };
 
-        fps {
-            bindings = <&to 4>;
-            key-positions = <13 14 15 16>;
-        };
-
         qwerty {
             bindings = <&to 0>;
             key-positions = <3 4 5 6>;
@@ -55,15 +51,9 @@
             key-positions = <32 0 9 33>;
         };
 
-        moba {
-            bindings = <&to 5>;
-            key-positions = <23 24 25 26>;
-        };
-
-        tabgamer {
-            bindings = <&kp TAB>;
-            key-positions = <10 20>;
-            layers = <5 4 6>;
+        cedilha {
+            bindings = <&kp RA(COMMA)>;
+            key-positions = <29 19>;
         };
     };
 
@@ -73,8 +63,8 @@
         QWERTY {
             bindings = <
 &kp Q             &kp W           &kp E           &kp R      &kp T        &kp Y      &kp U            &kp I                &kp O                 &kp P
-&hm LEFT_SHIFT A  &kp S           &kp D           &kp F      &kp G        &kp H      &kp J            &kp K                &kp L                 &hm RIGHT_SHIFT RA(COMMA)
-&hm LCTRL Z       &hm LEFT_GUI X  &hm LEFT_ALT C  &kp V      &kp B        &kp N      &kp M            &hm RIGHT_ALT COMMA  &hm RIGHT_GUI PERIOD  &hm RCTRL SEMICOLON
+&hm LEFT_SHIFT A  &kp S           &kp D           &kp F      &kp G        &kp H      &kp J            &kp K                &kp L                 &hm RIGHT_SHIFT SEMI
+&hm LCTRL Z       &hm LEFT_GUI X  &hm LEFT_ALT C  &kp V      &kp B        &kp N      &kp M            &hm RIGHT_ALT COMMA  &hm RIGHT_GUI PERIOD  &hm RCTRL SLASH
                                   &kp LEFT_SHIFT  &lt 1 TAB  &kp SPACE    &kp ENTER  &lt 2 BACKSPACE  &kp LEFT_CONTROL
             >;
 
@@ -97,7 +87,7 @@
 &kp F1  &kp F2   &kp F3   &kp F4   &kp C_NEXT    &kp LEFT_ALT   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE           &kp PRINTSCREEN
 &kp F5  &kp F6   &kp F7   &kp F8   &kp C_PP      &kp PAGE_UP    &hm INSERT HOME    &kp UP_ARROW     &hm PRINTSCREEN END  &hm LG(LC(LEFT)) LC(PAGE_UP)
 &kp F9  &kp F10  &kp F11  &kp F12  &kp C_PREV    &kp PAGE_DOWN  &kp LEFT_ARROW     &kp DOWN_ARROW   &kp RIGHT_ARROW      &hm LG(LC(RIGHT)) LC(PAGE_DOWN)
-                 &trans   &trans   &trans        &trans         &trans             &trans
+                 &trans   &trans   &mo 4         &trans         &trans             &trans
             >;
 
             label = "FN, actions and cursor";
@@ -112,32 +102,12 @@
             >;
         };
 
-        fps {
+        cursor {
             bindings = <
-&hm TAB ESC     &kp Q  &kp W  &kp E  &kp R        &kp T  &kp Y  &none  &none  &kp P
-&kp LEFT_SHIFT  &kp A  &kp S  &kp D  &kp F        &none  &none  &none  &none  &none
-&kp LCTRL       &kp Z  &kp X  &kp C  &kp V        &kp B  &none  &none  &none  &none
-                       &none  &none  &kp SPACE    &none  &none  &none
-            >;
-
-            label = "fps";
-        };
-
-        moba {
-            bindings = <
-&kp N1            &kp N2  &kp N3    &kp N4     &kp N5       &none  &none  &none  &none  &none
-&kp Q             &kp W   &kp E     &kp R      &kp T        &none  &none  &none  &none  &none
-&hm LEFT_SHIFT A  &kp S   &kp D     &kp F      &kp X        &none  &none  &none  &none  &none
-                          &kp LALT  &lt 6 TAB  &kp SPACE    &none  &none  &none
-            >;
-        };
-
-        moba2 {
-            bindings = <
-&kp Y  &kp U  &kp I  &kp O  &kp P       &none  &none  &none  &none  &none
-&kp H  &kp J  &kp K  &kp L  &kp FSLH    &none  &none  &none  &none  &none
-&kp Z  &kp X  &kp C  &kp V  &kp B       &none  &none  &none  &none  &none
-              &none  &none  &none       &none  &none  &none
+&trans  &trans  &trans  &trans  &trans    &trans  &msc SCRL_DOWN  &mkp MCLK       &msc SCRL_UP     &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
+                &trans  &trans  &trans    &trans  &trans          &trans
             >;
         };
     };
